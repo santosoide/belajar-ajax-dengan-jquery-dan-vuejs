@@ -18,6 +18,13 @@ Workshop Teknis Belajar Ajax menggunakan jQuery dan VueJs
 * [Sublime Text](http://www.sublimetext.com/)
 * [Jetbrains EAP](https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Early+Access+Program)
 
+## Tutorial
+* Bermain - main dengan jQuery
+* Membuat Form Tambah, Tampil dalam 1 halaman (Single Page Application)
+* Menampilkan data menggunakan Ajax dengan jQuery
+* Bermain - main dengan Vuejs
+* Menampilkan data menggunakan Ajax dengan VueJs
+
 ## Credit
 * [SB Admin 2](http://startbootstrap.com/template-overviews/sb-admin-2/) Template Bootstrap
 * [jQuery](https://jquery.com/)
