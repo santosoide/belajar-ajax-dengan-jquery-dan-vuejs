@@ -411,12 +411,14 @@
                                     <th>Company</th>
                                 </tr>
                                 </thead>
-                                <tbody v-for="r in results | orderBy 'name' | limitBy 10">
-                                <td>{{ r.name }}</td>
-                                <td>{{ r.email }}</td>
-                                <td>{{ r.phone }}</td>
-                                <td>{{ r.address }}</td>
-                                <td>{{ r.company }}</td>
+                                <tbody>
+                                <tr v-for="r in results | orderBy 'name' | limitBy 10">
+                                    <td>{{ r.name }}</td>
+                                    <td>{{ r.email }}</td>
+                                    <td>{{ r.phone }}</td>
+                                    <td>{{ r.address }}</td>
+                                    <td>{{ r.company }}</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
