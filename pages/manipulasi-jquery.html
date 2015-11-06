@@ -319,9 +319,6 @@
                                 <a class="active" href="manipulasi-jquery.html">Manipulasi jQuery</a>
                             </li>
                             <li>
-                                <a href="single-page-application.html">Single Page Application</a>
-                            </li>
-                            <li>
                                 <a href="ajax-data-jquery.html">Ajax data menggunakan jQuery</a>
                             </li>
                             <li>
@@ -397,10 +394,10 @@
                         Manipulasi inputan .val()
                     </div>
                     <div class="panel-body">
-                        <form role="form" onsubmit="return false;">
+                        <form role="form" onsubmit="return false;" autocomplete="off">
                             <div class="form-group">
                                 <label>Text Input</label>
-                                <input id="name" class="form-control" value="Edi Santoso">
+                                <input id="name" class="form-control" value="Belajar manipulasi Ajax dengan jQuery">
 
                                 <p class="help-block" id="display-text">Mendapatkan nilai dari input form.</p>
                             </div>
@@ -410,19 +407,102 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="panel panel-default">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                         Manipulasi class .addClass()
                     </div>
                     <div class="panel-body">
-                        <form role="form" onsubmit="return false;">
+                        <form role="form" onsubmit="return false;" autocomplete="off">
                             <div class="form-group">
                                 <label>Text Input</label>
-                                <input id="class-name" class="form-control" value="Edi Santoso">
+                                <input id="class-name" class="form-control"
+                                       value="Belajar manipulasi Ajax dengan jQuery">
 
                                 <p class="help-block" id="display-class-name">Manipulasi class.</p>
                             </div>
                             <button type="submit" class="btn btn-default" onclick="changeClass()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        Manipulasi attribute .attr()
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" onsubmit="return false;" autocomplete="off">
+                            <div class="form-group">
+                                <label>Text Input</label>
+                                <input id="name1" class="form-control" value="Belajar manipulasi Ajax dengan jQuery">
+
+                                <p class="help-block" id="display-text1">Menambah attribut html.</p>
+                            </div>
+                            <button type="submit" class="btn btn-default" onclick="addAttr()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Manipulasi .hide() .show()
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            <button type="button" class="btn btn-default" onclick="showForm()">Show Input Form</button>
+                            <button type="button" class="btn btn-primary" onclick="hideForm()">Hide Input Form</button>
+                        </p>
+                        <form id="myForm" role="form" onsubmit="return false;" class="hide" autocomplete="off">
+                            <div class="form-group">
+                                <label>Text Input</label>
+                                <input class="form-control" value="Belajar manipulasi Ajax dengan jQuery">
+
+                                <p class="help-block">Menambah attribut html.</p>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        Menangkap Event onkeyup()
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" onsubmit="return false;" autocomplete="off">
+                            <div class="form-group">
+                                <label>Text Input</label>
+                                <input id="cari" class="form-control" onkeyup="eventKeyUp(this.value)">
+
+                                <p class="help-block" id="display-cari">Menangkap Event onkeyup().</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Menangkap Event onkeypress()
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" onsubmit="return false;" autocomplete="off">
+                            <div class="form-group">
+                                <label>Text Input</label>
+                                <input id="cari1" class="form-control" onkeypress="eventKeyDown(this.value)">
+
+                                <p class="help-block" id="display-cari1">Menangkap Event onkeypress().</p>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -456,6 +536,36 @@
         $("#display-class-name").text(name).removeClass('help-block').addClass("text-success");
 
         console.log(name);
+    }
+
+    // menambah attribute html
+    function addAttr() {
+        var name = $("#name1").val();
+        $("#display-text1").text(name).attr("title", name);
+
+        console.log(name);
+    }
+
+    // bermain dengan .hide() .show()
+    function showForm() {
+        $("#myForm").removeClass("hide");
+    }
+
+    // hide form
+    function hideForm() {
+        $("#myForm").addClass("hide");
+    }
+
+    // Event key up
+    function eventKeyUp(val) {
+        console.log(val);
+        $("#display-cari").text(val);
+    }
+
+    // Event key down
+    function eventKeyDown(val) {
+        console.log(val);
+        $("#display-cari1").text(val);
     }
 </script>
 </body>

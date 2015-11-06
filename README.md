@@ -20,7 +20,6 @@ Workshop Teknis Belajar Ajax menggunakan jQuery dan VueJs
 
 ## Tutorial
 * Bermain - main dengan jQuery
-* Membuat Form Tambah, Tampil dalam 1 halaman (Single Page Application)
 * Menampilkan data menggunakan Ajax dengan jQuery
 * Bermain - main dengan Vuejs
 * Menampilkan data menggunakan Ajax dengan VueJs
